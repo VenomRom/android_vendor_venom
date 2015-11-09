@@ -58,3 +58,54 @@ PRODUCT_PACKAGES += \
     TealAccent \
     YellowAccent \
     WhiteAccent
+
+# Extra tools
+PRODUCT_PACKAGES += \
+    e2fsck \
+    mke2fs \
+    tune2fs \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs \
+    mkfs.ntfs \
+    fsck.ntfs \
+    mount.ntfs \
+    7z \
+    bzip2 \
+    curl \
+    lib7z \
+    powertop \
+    pigz \
+    tinymix \
+    unrar \
+    unzip \
+    zip \
+	vim \
+    rsync \
+	bash
+
+# Exchange support
+PRODUCT_PACKAGES += \
+    Exchange2
+
+#EX FAT
+WITH_EXFAT ?= true
+ifeq ($(WITH_EXFAT),true)
+TARGET_USES_EXFAT := true
+PRODUCT_PACKAGES += \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat
+endif
+
+# Needed by some RILs and for some Gapps packages
+PRODUCT_PACKAGES += \
+    librsjni \
+    libprotobuf-cpp-full
+
+# Charger images
+PRODUCT_PACKAGES += \
+    charger_res_images
