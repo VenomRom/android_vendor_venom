@@ -168,20 +168,24 @@ PRODUCT_COPY_FILES += \
 USE_DEX2OAT_DEBUG ?= false
 
 #Telephony
-$(call inherit-product, vendor/venom/config/telephony.mk)
+$(call inherit-product, vendor/venom/config/telephony
 
 # Venom_props
 $(call inherit-product, vendor/venom/config/venom_props.mk)
+
+# Themes
+include vendor/themes/common.mk
 
 # Enable ADB authentication
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
 endif
 
-	
+
 # Include SDCLANG definitions if it is requested and available
 #ifeq ($(HOST_OS),linux)
 #    ifneq ($(wildcard vendor/qcom/sdclang-4.0/),)
 #        include vendor/venom/sdclang/sdclang.mk
 #    endif
 #endif
+
