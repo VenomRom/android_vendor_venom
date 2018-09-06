@@ -176,6 +176,9 @@ $(call inherit-product, vendor/venom/config/venom_props.mk)
 # Themes
 include vendor/themes/common.mk
 
+# Packages
+include vendor/venom/config/packages.mk
+
 # Enable ADB authentication
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
@@ -188,4 +191,3 @@ endif
 #        include vendor/venom/sdclang/sdclang.mk
 #    endif
 #endif
-
