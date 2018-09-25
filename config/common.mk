@@ -61,6 +61,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     LatinIME \
     Launcher3 \
+    Calendar \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
