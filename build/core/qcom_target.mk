@@ -1,5 +1,5 @@
 # Bring in Qualcomm helper macros
-include vendor/lineage/build/core/qcom_utils.mk
+include vendor/venom/build/core/qcom_utils.mk
 
 define wlan-set-path-variant
 $(call project-set-path-variant,wlan,TARGET_WLAN_VARIANT,hardware/qcom/$(1))
@@ -33,8 +33,12 @@ $(call set-device-specific-path,POWER,power,hardware/qcom/power)
 $(call set-device-specific-path,THERMAL,thermal,hardware/qcom/thermal)
 $(call set-device-specific-path,VR,vr,hardware/qcom/vr)
 
+ifeq ($(BOARD_USES_AOSP_WLAN_HAL),true)
+$(call wlan-set-path-variant,wlan)
+else
 $(call wlan-set-path-variant,wlan-caf)
 $(call bt-vendor-set-path-variant,bt-caf)
+endif
 
 PRODUCT_CFI_INCLUDE_PATHS += \
     hardware/qcom/wlan-caf/qcwcn/wpa_supplicant_8_lib
