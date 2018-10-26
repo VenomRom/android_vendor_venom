@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-/**
- * Copyright (c) 2009, The Android Open Source Project
+ * Copyright (c) 2006, The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +13,9 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+*/
 -->
 <resources>
-    <bool name="def_wifi_on">true</bool>
-
-    <string name="def_backup_transport">com.google.android.gms/.backup.BackupTransportService</string>
-
-    <bool name="def_install_non_market_apps">true</bool>
-    <bool name="def_package_verifier_enable">false</bool>
+    <dimen name="nav_content_padding">0dp</dimen>
+    <dimen name="rounded_corner_content_padding">0dp</dimen>
 </resources>
