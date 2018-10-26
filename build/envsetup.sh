@@ -1,7 +1,11 @@
-function __print_aosp_functions_help() { cat <<EOF Additional AOSP 
-functions: - mka: Builds using SCHED_BATCH on all processors. EOF
+function __print_aosp_functions_help() {
+cat <<EOF
+Additional AOSP  functions:
+- mka:              Builds using SCHED_BATCH on all processors.
+EOF
 } 
-function mk_timer() {
+function mk_timer()
+{
     local start_time=$(date +"%s")
     $@
     local ret=$?
