@@ -3,7 +3,8 @@ cat <<EOF
 Additional AOSP  functions:
 - mka:              Builds using SCHED_BATCH on all processors.
 EOF
-} 
+}
+ 
 function mk_timer()
 {
     local start_time=$(date +"%s")
@@ -32,13 +33,16 @@ function mk_timer()
     echo
     return $ret
 }
+
 function mka() {
     m -j "$@"
 }
+
 function repopick() {
     T=$(gettop)
     $T/vendor/venom/build/tools/repopick.py $@
 }
+
 function fixup_common_out_dir() {
     common_out_dir=$(get_build_var OUT_DIR)/target/common
     target_device=$(get_build_var TARGET_DEVICE)
