@@ -7,7 +7,7 @@ import (
 )
 
 func customExpandVariables(ctx android.ModuleContext, in string) string {
-	customVars := ctx.Config().VendorConfig("lineageVarsPlugin")
+	customVars := ctx.Config().VendorConfig("customVarsPlugin")
 
 	out, err := android.Expand(in, func(name string) (string, error) {
 		if customVars.IsSet(name) {
