@@ -118,13 +118,8 @@ PRODUCT_COPY_FILES += \
 
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
-<<<<<<< HEAD
     vendor/venom/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml	
-	
-=======
-    vendor/superior/prebuilt/common/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
 
->>>>>>> f0ec9702... Set pixel theme
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/venom/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
@@ -169,13 +164,13 @@ PRODUCT_PACKAGES += \
 
 # Clean cache
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+    vendor/venom/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
 
 #Telephony
-$(call inherit-product, vendor/venom/config/telephony
+$(call inherit-product, vendor/venom/config/telephony)
 
 # Venom_props
 $(call inherit-product, vendor/venom/config/venom_props.mk)
@@ -188,10 +183,6 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
 endif
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f0ec9702... Set pixel theme
 # Include SDCLANG definitions if it is requested and available
 #ifeq ($(HOST_OS),linux)
 #    ifneq ($(wildcard vendor/qcom/sdclang-4.0/),)
