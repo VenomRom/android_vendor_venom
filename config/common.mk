@@ -170,7 +170,7 @@ PRODUCT_COPY_FILES += \
 USE_DEX2OAT_DEBUG ?= false
 
 #Telephony
-$(call inherit-product, vendor/venom/config/telephony)
+$(call inherit-product, vendor/venom/config/telephony.mk)
 
 # Venom_props
 $(call inherit-product, vendor/venom/config/venom_props.mk)
