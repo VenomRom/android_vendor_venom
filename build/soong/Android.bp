@@ -7,7 +7,7 @@ bootstrap_go_package {
 }
 
 bootstrap_go_package {
-    name: "soong-venom-generator",
+    name: "soong-custom-generator",
     pkgPath: "venom/soong/generator",
     deps: [
         "blueprint",
