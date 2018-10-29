@@ -1,15 +1,14 @@
 bootstrap_go_package {
-    name: "soong-lineage",
-    pkgPath: "lineage/soong/android",
+    name: "soong-venom",
+    pkgPath: "venom/soong/android",
     srcs: [
-        "android/config.go",
         "android/variable.go",
     ],
 }
 
 bootstrap_go_package {
-    name: "soong-lineage-generator",
-    pkgPath: "lineage/soong/generator",
+    name: "soong-venom-generator",
+    pkgPath: "venom/soong/generator",
     deps: [
         "blueprint",
         "blueprint-pathtools",
@@ -24,7 +23,7 @@ bootstrap_go_package {
     pluginFor: ["soong_build"],
 }
 
-lineage_generator {
+custom_generator {
     name: "generated_kernel_includes",
 
     // The headers make command
