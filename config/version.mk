@@ -23,6 +23,7 @@ ifndef VENOM_BUILD_TYPE
 endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+CUSTOM_BUILD_DATE := $(shell date -u +%Y%m%d-%H%M)
 
 ifeq ($(VENOM_OFFICIAL), true)
    LIST = $(shell curl -s https://raw.githubusercontent.com/VenomRom/android_vendor_venom/pie/venom.devices)
@@ -46,9 +47,9 @@ endif
 
 TARGET_PRODUCT_SHORT := $(subst venom_,,$(CUSTOM_BUILD))
 
-VENOM_VERSION := VenomRom-$(VENOM_MOD_VERSION)-$(CURRENT_DEVICE)-$(VENOM_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+VENOM_VERSION := VenomRom-$(VENOM_MOD_VERSION)-$(CURRENT_DEVICE)-$(VENOM_BUILD_TYPE)-$(CUSTOM_BUILD_DATE)
 
-VENOM_FINGERPRINT := VenomRom/$(VENOM_MOD_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%Y%m%d)
+VENOM_FINGERPRINT := VenomRom/$(VENOM_MOD_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
 
 PRODUCT_GENERIC_PROPERTIES += \
   ro.venom.version=$(VENOM_VERSION) \
@@ -58,5 +59,6 @@ PRODUCT_GENERIC_PROPERTIES += \
 VENOM_DISPLAY_VERSION := VenomRom-$(VENOM_MOD_VERSION)-$(VENOM_BUILD_TYPE)
 
 PRODUCT_GENERIC_PROPERTIES += \
+<<<<<<< HEAD
   ro.venom.display.version=$(VENOM_DISPLAY_VERSION)\
   ro.venom.fingerprint=$(EXTENDED_FINGERPRINT)
