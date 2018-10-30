@@ -1,5 +1,5 @@
 # Copyright (C) 2018 ArrowOS
-# Copyright (C) 2018 The Superior OS Project
+# Copyright (C) 2018 VenomRom Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,6 +12,25 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+# Custom venom packages
+PRODUCT_PACKAGES += \
+    LatinIME \
+    PixelLauncher3 \
+    Calendar \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    WallpaperPickerGooglePrebuilt \
+    Stk \
+    Recorder \
+    Music \
+    Browser \
+    InterfaceCenter \
+    SystemUpdates \
+    MarkupGoogle \
+    WellbeingPrebuilt \
+    MatchmakerPrebuilt \
+    NexusWallpapersStubPrebuilt2017
 
 # Themes Dark
 PRODUCT_PACKAGES += \
@@ -34,21 +53,21 @@ PRODUCT_PACKAGES += \
     BlueGreyAccent \
     BrownAccent \
     CyanAccent \
-	CandyRedAccent \
+    CandyRedAccent \
     DeepOrangeAccent \
     DeepPurpleAccent \
     DuiDark \
-	ExtendedGreenAccent \
+    ExtendedGreenAccent \
     GBoardDark \
     GreenAccent \
     GreyAccent \
     IndigoAccent \
-	JadeGreenAccent \
+    JadeGreenAccent \
     LightBlueAccent \
     LightGreenAccent \
     LimeAccent \
     OrangeAccent \
-	PaleBlueAccent \
+    PaleBlueAccent \
     PaleRedAccent \
     PinkAccent \
     PurpleAccent \
@@ -64,15 +83,9 @@ PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs \
-    mount.exfat \
-    fsck.exfat \
-    mkfs.exfat \
     mkfs.f2fs \
     fsck.f2fs \
     fibmap.f2fs \
-    mkfs.ntfs \
-    fsck.ntfs \
-    mount.ntfs \
     7z \
     bzip2 \
     curl \
@@ -83,18 +96,35 @@ PRODUCT_PACKAGES += \
     unrar \
     unzip \
     zip \
-	vim \
-    rsync \
-	bash
+    vim \
+    bash
 
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
 
-# exFAT tools
- PRODUCT_PACKAGES += \
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
+    ssh \
+    sshd \
+    sshd_config \
+    ssh-keygen \
+    start-ssh
+
+ # rsync
+PRODUCT_PACKAGES += \
+    rsync
+
+# Filesystems tools
+PRODUCT_PACKAGES += \
     fsck.exfat \
-    mkfs.exfat
+    fsck.ntfs \
+    mke2fs \
+    mkfs.exfat \
+    mkfs.ntfs \
+    mount.ntfs
 
 # Needed by some RILs and for some Gapps packages
 PRODUCT_PACKAGES += \
