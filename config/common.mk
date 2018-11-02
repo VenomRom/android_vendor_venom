@@ -48,6 +48,10 @@ PRODUCT_COPY_FILES += \
     vendor/venom/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif
 
+# priv-app permissions
+PRODUCT_COPY_FILES += \
+    vendor/superior/prebuilt/common/etc/permissions/privapp-permissions-superior.xml:system/etc/permissions/privapp-permissions-superior.xml
+
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/venom/overlay/common \
