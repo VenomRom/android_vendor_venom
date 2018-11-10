@@ -182,9 +182,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Bootanimation
-include vendor/venom/config/bootanimation.mk
-
 #Telephony
 $(call inherit-product, vendor/venom/config/telephony.mk)
 
